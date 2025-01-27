@@ -39,7 +39,7 @@ class LoginController extends Controller
             if(Hash::check($request->input('password'), $user->password)){
                 // Log the user in
                 $request->session()->put('user', $user);
-                return redirect()->route('dashboard');
+                return redirect()->route('welcome');
             }
         }
 
